@@ -1,0 +1,20 @@
+USE [StoreSample]
+GO
+
+SELECT Sales.Shippers, COUNT(*) AS Shippers, COUNT(string_split) AS FilasNoNulas, 
+MIN(Production.Products.unitprice) AS FechaMin, MAX(Production.Products.unitprice) AS PMax, 
+SUM(Freight) PesoTotal,
+FROM Sales.OrderDetails
+GROUP BY Sales.OrderDetails
+GO
+
+
+USE [StoreSample]
+GO
+
+SELECT Sales.Shippers, COUNT(*) AS Shippers, COUNT(string_split) AS FilasNoNulas, 
+MIN(Production.Products.unitprice) AS FechaMin, MAX(Production.Products.unitprice) AS PMax, 
+SUM(Freight) PesoTotal,
+FROM Sales.OrderDetails
+GROUP BY Sales.OrderDetails
+GO
